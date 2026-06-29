@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>La Réunion – Travel Guide</title>
+
+<style>
+:root{
+  --bg:#0e1722;
+  --paper:#f7f3ea;
+  --ink:#1e2a2f;
+  --muted:#5c6b73;
+  --accent:#ff7b54;
+  --accent2:#2ec4b6;
+  --accent3:#ffd166;
+  --shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+body{
+  background:var(--bg);
+}
+
+/* HERO */
+header{
+  height:75vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  position:relative;
+  overflow:hidden;
+}
+
+header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21") center/cover no-repeat;
+  background-size:cover;
+  filter:brightness(0.55) saturate(1.2);
+  transform:scale(1.1);
+}
+
+header h1{
+  position:relative;
+  font-size:3.8rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+header p{
+  position:relative;
+  margin-top:10px;
+  font-size:1.2rem;
+  opacity:0.9;
+}
+
+.badge{
+  position:relative;
+  margin-top:18px;
+  padding:8px 16px;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  border-radius:40px;
+  backdrop-filter:blur(8px);
+  font-size:0.9rem;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1050px;
+  margin:-60px auto 60px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
+}
+
+/* CARDS */
+.card{
+  background:var(--paper);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:22px;
+  position:relative;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height:6px;
+  width:100%;
+  background:linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+}
+
+.card h2{
+  color:var(--ink);
+  margin-bottom:10px;
+  font-size:1.2rem;
+}
+
+.card ul{
+  padding-left:18px;
+  color:var(--muted);
+}
+
+.card li{
+  margin-bottom:6px;
+}
+
+/* FULL WIDTH CARD */
+.wide{
+  grid-column:1 / -1;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#b7c2c8;
+  font-size:0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>La Réunion</h1>
+  <p>Travel Guide – Île intense de l’océan Indien</p>
+  <div class="badge">DOM-ROM français • Nature • Volcans • Culture</div>
+</header>
+
+<div class="container">
+
+  <div class="card wide">
+    <h2>Présentation générale</h2>
+    <ul>
+      <li>DOM-ROM français (région + département)</li>
+      <li>Située dans l’océan Indien, près de Madagascar</li>
+      <li>Île d’origine volcanique</li>
+      <li>Capitale : Saint-Denis</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Géographie et climat</h2>
+    <ul>
+      <li>Relief montagneux et cirques naturels</li>
+      <li>Volcan actif : Piton de la Fournaise</li>
+      <li>Climat tropical variable selon zones</li>
+      <li>Différences côtes est / ouest</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Population</h2>
+    <ul>
+      <li>Environ 870 000 habitants</li>
+      <li>Population jeune</li>
+      <li>Société multiculturelle</li>
+      <li>Origines variées</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Culture et langues</h2>
+    <ul>
+      <li>Français officiel</li>
+      <li>Créole réunionnais quotidien</li>
+      <li>Culture métissée</li>
+      <li>Maloya & séga</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Économie</h2>
+    <ul>
+      <li>Services dominants</li>
+      <li>Canne à sucre</li>
+      <li>Importations importantes</li>
+      <li>Chômage élevé</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Nature et biodiversité</h2>
+    <ul>
+      <li>Parc national protégé</li>
+      <li>UNESCO</li>
+      <li>Espèces endémiques</li>
+      <li>Forêts + volcans</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tourisme et activités</h2>
+    <ul>
+      <li>Randonnée (cirques)</li>
+      <li>Plages et lagons</li>
+      <li>Parapente, canyoning</li>
+      <li>Tourisme nature</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  Projet scolaire – La Réunion
+</footer>
+
+</body>
+</html>
